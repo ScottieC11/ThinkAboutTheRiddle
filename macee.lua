@@ -1,5 +1,5 @@
-    locla Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/ScottieC11/Kavo-UI-Library-EDIT/main/source.lua"))()
-    local Window = Library.CreateLib ("Macee's GUI Surprise", "Mac3e")
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/ScottieC11/Kavo-UI-Library-EDIT/main/source.lua"))()
+    local Window = Library.CreateLib ("Macee's GUI Surprise", "Macee")
 
     local Main = Window:NewTab("Main")
     local MainSection = Main:NewSection("Main")
@@ -10,7 +10,7 @@
     end)
     local Player = Window:NewTab("Player")
     local PlayerSection = Player:NewSection("Player")
-    PlayerSection:NewSlider("Walkspeed", "How Fast Your Player Walks", 500, 0, funtcion(s) -- 500 (MaxValue) | 0 (MinValue)
+    PlayerSection:NewSlider("Walkspeed", "How Fast Your Player Walks", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
         end)
     PlayerSection:NewSlider("JumpPower", "How High Your Player Jumps", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
